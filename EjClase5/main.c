@@ -2,16 +2,17 @@
 #include <stdlib.h>
 #include "Numeros.h"
 #define T 5
-#define V 7
 
 int main()
 {
-    int numeros[T], maximo, posicion;
+    int numeros[T], maximo, posicion, numero;
     cargarVector(numeros,T);
     mostrarVector(numeros,T);
     maximo = buscarMax(numeros,T);
     printf("\nMaximo numero ingresado: %d\n",maximo);
-    posicion = buscarValor(numeros,T,V);
+    printf("\nIngrese el valor a encontrar: ");
+    scanf("%d",&numero);
+    posicion = buscarValor(numeros,T,numero);
     if(posicion != -1){
         printf("Valor encotrado en la posicion [%d]\n\n",posicion);
     }
